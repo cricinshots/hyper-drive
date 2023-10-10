@@ -1,0 +1,53 @@
+/* tmain.css */
+body {
+    height: auto;
+    width: auto;
+    background-image: url("../../../public/plate_back_1.png"); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+    background-size: cover; /* Adjust this property as needed */
+    background-repeat: no-repeat; /* Adjust this property as needed */
+    background-position: center center; /* Adjust this property as needed */
+  }
+  
+
+.Heading {
+    padding-top: 80px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: kanit;
+    /* Add more styles here as needed */
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Use flexbox to create a side-by-side layout */
+    
+  }
+  
+  .other-container {
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    background-color: rgba(7,19,33,0.32); 
+    border: none;
+    text-decoration: none;
+    outline: none;
+    color: aliceblue;
+    font-size: 30px;
+  }
+  input[type="text"], textarea {
+
+  }
+ 
+.gem-image {
+  
+  
+  }
+  
