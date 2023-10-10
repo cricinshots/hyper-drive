@@ -5,19 +5,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../../../public/plate_back_1.png");
+  border-radius: 19px;
+  background: url("../../../public/plate_back_1.png"),
+    lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .cardElementHome {
   width: 80%;
-  height: 80%;
   display: flex;
   justify-content: center;
   position: relative;
 }
 .HomeCardheading {
+  margin-top: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0px 2px 0px #000;
@@ -40,16 +42,19 @@
 }
 
 #gameResourceImage {
-  width: 10vw;
-  height: 10vw;
-  background-image: url("../../../public/coinGroup.png");
+  width: 175px;
+  height: 100px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  left: -49px;
+  top: 0; 
+  background-image: url("../../../public/coinGroup.png");
 }
 #buttonReload {
-  width: 3vw;
-  height: 3vw;
+  width: 40px;
+  height: 40px;
   background-image: url("../../../public/reloadButton.png");
   background-position: center;
   background-size: cover;
@@ -57,30 +62,54 @@
 }
 
 #gameResourceWidget {
-  width: 29%;
+  width: 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  background-color: rgba(7,19,33,0.32);
+  border-radius: 12px;
+  height: 62px;
 }
 
 #gameResourceComponent {
-  height: 92%;
+  background-color: rgba(7,19,33,0.32);
+  height: 240px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  border-radius: 20px;
 }
+
 .numberHeadings {
+  position: relative;
+  top: 0;
   color: #fff;
   text-align: center;
   font-family: Kanit;
-  font-size: 14.587px;
+  font-size: 26.587px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
   letter-spacing: 0.656px;
   text-transform: capitalize;
+  bottom: 0;
+  right: 35px;
+}
+
+.resourceButton{
+  background: linear-gradient(0deg, #FFB032 0%, #FFB032 100%), #2F61AA;
+  color: #FFF;
+text-align: center;
+text-shadow: 0px 2.529008388519287px 0px #000, 0px 0.5293617844581604px 0px #203;
+font-family: Kanit;
+font-size: 19.277px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+letter-spacing: 1.639px;
+margin-top: 20px;
+border-radius: 5px;
+padding: 5px;
 }
