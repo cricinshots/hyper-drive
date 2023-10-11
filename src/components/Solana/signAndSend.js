@@ -10,7 +10,7 @@ export const doTransact = async (amt,colyToken)=> {
 
     const provider = getProvider(); // see "Detecting the Provider"
     const info = await connect();
-    const network = "https://api.testnet.solana.com";
+    const network = "https://api.devnet.solana.com";
     const connection = new Connection(network);
 
     const destination = "9E8F8829ZKeiraCCxinJF5DNngbkpWQ993e2BNNB8L7g";
@@ -24,8 +24,8 @@ export const doTransact = async (amt,colyToken)=> {
     const latestBlockHash = await connection.getLatestBlockhash('confirmed');
     transaction.recentBlockhash = await latestBlockHash.blockhash;
     console.info(transaction.recentBlockhash)
-    // transaction.feePayer = new PublicKey(info.publicKey.toString())
-    transaction.feePayer = new PublicKey(destination)
+    transaction.feePayer = new PublicKey(info.publicKey.toString())
+    // transaction.feePayer = new PublicKey(destination)
     console.log(`Sending ${amount} ${(mint_address)} from ${(info.publicKey.toString())} to ${(destination)}.`)
     try {
         const signedTransac = await provider.signAndSendTransaction(transaction);

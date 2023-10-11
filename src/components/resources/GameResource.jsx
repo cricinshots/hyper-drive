@@ -15,7 +15,7 @@ export default function GameResource() {
       })
       .then((r) => {
         changeGems(r.data["A4"]);
-        console.log(r.data["A4"]);    
+        console.log(r.data["A4"]);
       });
   }
   return (
@@ -39,7 +39,6 @@ export default function GameResource() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "row",
               backgroundColor: "rgba()",
             }}
           >
