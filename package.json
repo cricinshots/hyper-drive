@@ -1,6 +1,7 @@
 {
   "name": "wallet",
   "version": "0.1.0",
+  "homepage": "https://cricinshots.in/hyperdrive",
   "private": true,
   "dependencies": {
     "@solana/spl-token": "^0.3.8",
