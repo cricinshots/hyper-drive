@@ -10,11 +10,11 @@ export const doTransact = async (amt,colyToken)=> {
 
     const provider = getProvider(); // see "Detecting the Provider"
     const info = await connect();
-    const network = "https://api.devnet.solana.com";
+    const network = "https://api.devne.solana.com";
     const connection = new Connection(network);
 
     const destination = "9E8F8829ZKeiraCCxinJF5DNngbkpWQ993e2BNNB8L7g";
-    const mint_address = "AUNnuUwLwgYZ3JPUYc23awDqcuHhDootHVkY1T3UoKQy"
+    const mint_address = "ERW1cH6jbFd6P3sdZoH9QdgqjCvVf5RTMrzEWSWXaEto"
     let sourceAcc = await getOrCreateAssociatedTokenAccount(connection,new PublicKey(info.publicKey.toString()),new PublicKey(mint_address),new PublicKey(info.publicKey.toString()))
     let destAcc = await getOrCreateAssociatedTokenAccount(connection,new PublicKey(info.publicKey.toString()),new PublicKey(mint_address),new PublicKey(destination))
     let transaction = new Transaction();
