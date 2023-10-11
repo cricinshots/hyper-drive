@@ -6,8 +6,8 @@
     align-items: center;
     flex-direction: column;
     border-radius: 19px;
-    background: url("../../../public/plate_back_1.png"),
-      lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;
+    background: url("/public/plate_back_1.png");
+      /*lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

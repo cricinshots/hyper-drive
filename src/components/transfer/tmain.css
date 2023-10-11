@@ -7,15 +7,15 @@
   align-items: center;
   flex-direction: column;
   border-radius: 19px;
-  background: url("/public/plate_back_1.png"),
-    lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;
+  background: url("/public/plate_back_1.png");
+    /*lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;*/
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-  
+
 #gems{
-  display: flex; 
+  display: flex;
   padding-left: 55px;
   font-family: kanit;
   font-size: 15px;
@@ -55,16 +55,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
    /* height: 200px;  Use flexbox to create a side-by-side layout */
-    
+
   }
-  
+
   .other-container {
     border-radius: 10px;
     height: 40px;
     width: 200px;
-    background-color: rgba(7,19,33,0.32); 
+    background-color: rgba(7,19,33,0.32);
     border: none;
     text-decoration: none;
     outline: none;
@@ -88,4 +88,3 @@
     cursor: pointer;
 
   }
-  
