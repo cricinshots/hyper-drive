@@ -24,8 +24,10 @@ export default function Home(props) {
 
   useEffect(() => {
       let main=async()=>{
-          let res = await connect(true);
-          if(res) navigation("/resource")
+          setTimeout(async ()=> {
+              let res = await connect(true);
+              if (res) navigation("/resource")
+          },1000)
       }
       main();
     // axios
@@ -39,7 +41,7 @@ export default function Home(props) {
     <div id="rootHome" className="tElement">
       <div className="con1">
         <div className="homeContainer">
-          
+
           <div
             style={{
               display: "flex",

@@ -18,7 +18,7 @@ export default function WalletResource() {
     const url = "https://cricinshots.in/apis/apidev2/wallet/checkBalance.php";
     axios
       .post(url, {
-        token: "bf235e1e38ece59eccc2b71e9832358ce95fa722c2d35cO573e77d3457d5a2e827a179fd18206a6",
+        token: localStorage.getItem("colyseusToken"),
       })
       .then((r) => {
         changeGems(r.data['uiAmount']);
@@ -29,6 +29,9 @@ export default function WalletResource() {
           setDisab(1);
       })
   }
+    useEffect(() => {
+        getGems();
+    }, []);
   return (
     <>
       <div style={{ width: "100%" }}>

@@ -14,7 +14,7 @@ export default function MainT() {
     axios
       .post(url, {
         token:
-          "bf235e1e38ece59eccc2b71e9832358ce95fa722c2d35cO573e77d3457d5a2e827a179fd18206a6",
+            localStorage.getItem("colyseusToken"),
       })
       .then((r) => {
         changeGems(r.data["A4"]);
@@ -27,12 +27,12 @@ export default function MainT() {
     axios
       .post("https://cricinshots.in/apis/apidev2/wallet/exportWallet.php", {
         A4: amount,
-        token: window.colyseusToken,
+        token:localStorage.getItem("colyseusToken"),
       })
       .then((r) => {
         setLoader(false);
         changeGems(r.data["A4"]);
-        alert("Success transfered gems from game to wallet!");
+        alert("Successfully transferred gems from game to wallet!");
       })
       .catch((e) => {
         setLoader(false);
@@ -64,7 +64,7 @@ export default function MainT() {
             <div className="Heading">
               You are transferring resources from your game to your wallet
             </div>
-            <div className="Heading">Gems in account -{Gems}</div>
+            <div className="Heading">Gems in account -  {Gems}</div>
 
             <div className="con1">
               <div className="container">

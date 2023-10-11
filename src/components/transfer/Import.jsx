@@ -13,13 +13,13 @@ export default function MainT() {
   const [Gems, changeGems] = useState(0);
 
   useEffect(() => {}, [amount,loader]);
-  
+
   useEffect(()=>{
     const url = "https://cricinshots.in/apis/apidev2/wallet/checkBalance.php";
-    
+
     axios
       .post(url, {
-        token: "bf235e1e38ece59eccc2b71e9832358ce95fa722c2d35cO573e77d3457d5a2e827a179fd18206a6",
+        token: localStorage.getItem("colyseusToken"),
       })
       .then((r) => {
         changeGems(r.data['uiAmount']);
@@ -50,7 +50,7 @@ export default function MainT() {
             <div className="Heading">
               You are transferring resources from your Wallet to your Game
             </div>
-            <div className="Heading">Gems in Wallet -{Gems}</div>
+            <div className="Heading">Gems in Wallet -  {Gems}</div>
 
             <div className="con1">
               <div className="container">
@@ -85,9 +85,11 @@ export default function MainT() {
                   setLoader(true);
                   await doTransact(
                     amount,
-                    "bf235e1e38ece59eccc2b71e9832358ce95fa722c2d35cO573e77d3457d5a2e827a179fd18206a6"
+                      localStorage.getItem("colyseusToken")
                   );
                   setLoader(false);
+                  alert("Successfully transferred gems to your account, please wait for balance to refresh")
+                  changeGems((gems)=>gems-amount)
                 }}
               ></div>
             </div>

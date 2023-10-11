@@ -14,7 +14,7 @@ export default function GameResource() {
     const url = "https://cricinshots.in/apis/apidev2/api20/testGetUserStats.php";
     axios
       .post(url, {
-        token: "1d6628797cbcfecc68255a456bce020e3c02c5b616b55dO3ee02f706a9ed4905f63b0800761548a",
+        token: localStorage.getItem("colyseusToken"),
       })
       .then((r) => {
         changeGems(r.data["A4"]);
@@ -24,6 +24,11 @@ export default function GameResource() {
         setDisab(1);
         console.log(e)})
   }
+
+    useEffect(() => {
+        getGems();
+    }, []);
+
   return (
     <>
       <div style={{ width: "100%" }}>

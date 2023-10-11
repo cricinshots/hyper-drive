@@ -7,9 +7,9 @@ import './App.css';
 const SetColy = ()=> {
   const [params, setParams] = useSearchParams();
   setTimeout(() => {
-    if(!window.colyseusToken)
-      window.colyseusToken = params.get("colyseusToken");
-    console.info(window.colyseusToken)
+    if(params.get("colyseusToken"))
+     localStorage.setItem('colyseusToken',params.get("colyseusToken"))
+    console.info(localStorage.getItem("colyseusToken"))
   })
   return <></>
 }

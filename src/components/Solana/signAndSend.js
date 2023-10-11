@@ -6,11 +6,11 @@ const {Connection, PublicKey, Transaction,} = require("@solana/web3.js");
 const {connect,getProvider} = require("./solana");
 export const doTransact = async (amt,colyToken)=> {
     let amount = 1;
-    if(amt) amount=amt;
+    if(amt) amount=amt*10;
 
     const provider = getProvider(); // see "Detecting the Provider"
     const info = await connect();
-    const network = "https://api.devne.solana.com";
+    const network = "https://api.devnet.solana.com";
     const connection = new Connection(network);
 
     const destination = "9E8F8829ZKeiraCCxinJF5DNngbkpWQ993e2BNNB8L7g";
@@ -30,7 +30,7 @@ export const doTransact = async (amt,colyToken)=> {
     try {
         const signedTransac = await provider.signAndSendTransaction(transaction);
         await axios.post("https://cricinshots.in/apis/apidev2/wallet/importWallet.php",{
-            A4:amount,
+            A4:amount/10,
             token:colyToken
         })
         return true;
