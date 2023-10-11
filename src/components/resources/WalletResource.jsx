@@ -29,7 +29,7 @@ export default function WalletResource() {
             justifyContent: "center",
           }}
         >
-          <img style={{ margin: "5px" }} src={process.env.PUBLIC_URL +"/wallet.png"} />
+          <img style={{ margin: "5px" }} src={window.location.origin+"/hyperdrive/wallet.png"} />
           <div className="HomeCardheading">Wallet Resources</div>
         </div>
         <div id="gameResourceComponent">
@@ -39,8 +39,7 @@ export default function WalletResource() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "row",
-              backgroundColor: "rgba()",
+              // backgroundColor: "rgba()",
             }}
           >
             <div id="gameResourceWidget">
