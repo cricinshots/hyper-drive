@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <>
       <div id="rootElementHome">
-        <div className="HomeCardheading">Connect To wallet</div>
         <div
           style={{
             display: "flex",
@@ -31,10 +30,12 @@ export default function Home() {
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
+              position:"relative",
+              top:"20px"
             }}
           >
             <div
-              className="resourceButton"
+              className="resourceButton" style={{marginBottom:"15px"}}
               onClick={()=>navigate('transfer/export')}
               >
             </div>

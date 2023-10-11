@@ -3,24 +3,35 @@ import axios from "axios";
 
 export default function WalletResource() {
   const [Gems, changeGems] = useState(0);
+  const [disab,setDisab]=useState(1);
+
 
   useEffect(() => {
     console.log(Gems);
-  }, [Gems]);
+  }, [Gems,disab]);
   function getGems() {
-    const url = "https://dev2.wegalabs.xyz:444/solana/balance";
+    if(disab!=1){
+      console.log('working');
+      return;
+    };
+    setDisab(0.2);
+    const url = "https://cricinshots.in/apis/apidev2/wallet/checkBalance.php";
     axios
       .post(url, {
-        walletAddress: "6bCQMc3eeGiqSktmHoVFU3vnWdN55JQubMmYjX7PC8pS",
+        token: "bf235e1e38ece59eccc2b71e9832358ce95fa722c2d35cO573e77d3457d5a2e827a179fd18206a6",
       })
       .then((r) => {
         changeGems(r.data['uiAmount']);
         console.log(r.data);
-      });
+        setDisab(1);
+      }).catch(e=>{
+          console.log(e);
+          setDisab(1);
+      })
   }
   return (
     <>
-      <div style={{ width: "100%", margin: "1vw" }}>
+      <div style={{ width: "100%" }}>
         <div
           style={{
             position: "relative",
@@ -29,7 +40,7 @@ export default function WalletResource() {
             justifyContent: "center",
           }}
         >
-          <img style={{ margin: "5px" }} src={window.location.origin+"/hyperdrive/wallet.png"} />
+          <img style={{ margin: "5px",height:"fit-content",marginTop:"20px" }} src={window.location.origin+"/hyperdrive/wallet.png"} />
           <div className="HomeCardheading">Wallet Resources</div>
         </div>
         <div id="gameResourceComponent">
@@ -39,7 +50,6 @@ export default function WalletResource() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              // backgroundColor: "rgba()",
             }}
           >
             <div id="gameResourceWidget">
@@ -48,7 +58,8 @@ export default function WalletResource() {
             </div>
           </div>
           <div>
-            <div id="buttonReload" onClick={() => getGems()}></div>
+          <div id="buttonReload" onClick={() => getGems()} style={{opacity:disab}}></div>
+
           </div>
         </div>
       </div>
