@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <Router basename={"/hyperdrive"}>
       <SetColy/>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
