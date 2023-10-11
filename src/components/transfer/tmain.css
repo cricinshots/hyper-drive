@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: column;
   border-radius: 19px;
-  background: url("../../../public/plate_back_1.png"),
+  background: url("/public/plate_back_1.png"),
     lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;
   background-position: center;
   background-size: cover;
@@ -79,7 +79,7 @@
   }
 
   .transferButton{
-    background: url(../../../public/Buttons/Group3355-1.png);
+    background: url("/public/Buttons/Group3355-1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

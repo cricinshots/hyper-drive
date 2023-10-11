@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
   border-radius: 19px;
-  background: url("../../../public/plate_back_1.png"),
+  background: url("/public/plate_back_1.png"),
     lightgray -63.363px -65.641px / 131.84% 125.102% no-repeat;
   background-position: center;
   background-size: cover;
@@ -50,12 +50,12 @@
   position: relative;
   left: -49px;
   top: 0; 
-  background-image: url("../../../public/coinGroup.png");
+  background-image: url("/public/coinGroup.png");
 }
 #buttonReload {
   width: 40px;
   height: 40px;
-  background-image: url("../../../public/reloadButton.png");
+  background-image: url("/public/reloadButton.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@
 }
 
 .resourceButton{
-background: url("../../../public/Buttons/Group3355.png");
+background: url("/public/Buttons/Group3355.png");
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
@@ -108,7 +108,7 @@ height: 38px;
 cursor: pointer;
 }
 .resourceButton2{
-background: url("../../../public/Buttons/Group3355-2.png");
+background: url("/public/Buttons/Group3355-2.png");
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
