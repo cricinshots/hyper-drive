@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeResource from "./components/resources/Home"
-import Transfar from "./components/transfar/MainT"
+import Transfar from "./components/transfer/MainT"
 import './App.css';
 
 function App() {
