@@ -8,7 +8,7 @@ let setAddress = async (setNavigate)=>{
         let res = await connect();
         await axios.post("https://cricinshots.in/apis/apidev2/wallet/linkWallet.php", {
             "address": res.publicKey.toString(),
-            "token": window.colyseusToken
+            "token": localStorage.getItem("colyseusToken")
         })
         setNavigate((nav)=>nav+1);
 
