@@ -24,7 +24,6 @@
 }
 
 .Heading {
-    padding-top: 80px ;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -81,10 +80,10 @@
   .transferButton{
     background: url("/public/Buttons/Group3355-1.png");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 254px;
-    height: 38px;
+    width: 220px;
+    height: 40px;
     cursor: pointer;
-
   }
+

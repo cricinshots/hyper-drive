@@ -2,13 +2,32 @@ import React, { useState, useEffect } from "react";
 import "./tmain.css";
 import { doTransact } from "../Solana/signAndSend";
 import { Grid } from "react-loader-spinner";
+import axios from "axios";
+
 
 
 export default function MainT() {
   const [amount, changeAmount] = useState(0);
   const [loader, setLoader] = useState(false);
 
+  const [Gems, changeGems] = useState(0);
+
   useEffect(() => {}, [amount,loader]);
+  
+  useEffect(()=>{
+    const url = "https://cricinshots.in/apis/apidev2/wallet/checkBalance.php";
+    
+    axios
+      .post(url, {
+        token: "bf235e1e38ece59eccc2b71e9832358ce95fa722c2d35cO573e77d3457d5a2e827a179fd18206a6",
+      })
+      .then((r) => {
+        changeGems(r.data['uiAmount']);
+        console.log(r.data);
+      }).catch(e=>{
+          console.log(e);
+      })
+  },[])
 
   return (
     <>
@@ -27,13 +46,13 @@ export default function MainT() {
         </div>
       ) : (
         <>
-          <div id="rootElementTransfer" className="tElement">
+          <div id="rootElementTransfer" className="tElement" style={{justifyContent:"center"}}>
             <div className="Heading">
-              You are transferring resources from your wallet to your Game
+              You are transferring resources from your Wallet to your Game
             </div>
+            <div className="Heading">Gems in Wallet -{Gems}</div>
 
             <div className="con1">
-              <div id="gems">Gems</div>
               <div className="container">
                 <div className="gems">
                   <img
@@ -61,7 +80,7 @@ export default function MainT() {
               }}
             >
               <div
-                className="transferButton1"
+                className="transferButton"
                 onClick={async () => {
                   setLoader(true);
                   await doTransact(

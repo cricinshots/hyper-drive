@@ -57,7 +57,7 @@ export default function MainT() {
       ) : (
         <div
           id="rootElementTransfer"
-          style={{ height: "91%", justifyContent: "center" }}
+          style={{ justifyContent: "center" }}
           className="tElement"
         >
           <div>
@@ -67,7 +67,6 @@ export default function MainT() {
             <div className="Heading">Gems in account -{Gems}</div>
 
             <div className="con1">
-              <div id="gems">Gems</div>
               <div className="container">
                 <div className="gems">
                   <img
@@ -92,10 +91,10 @@ export default function MainT() {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
+                alignItems:"center"
               }}
             >
-              <div className="resourceButton1" onClick={() => sendFunds()}>
-                TRANSFER
+              <div className="transferButton" onClick={() => sendFunds()}>
               </div>
             </div>
           </div>

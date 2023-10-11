@@ -37,15 +37,9 @@ export default function Home(props) {
   }, [navigate]);
   return (
     <div id="rootHome" className="tElement">
-      <div className="Heading">Connect Your wallet</div>
       <div className="con1">
         <div className="homeContainer">
-          <img
-            src={process.env.PUBLIC_URL +"/groupHome.png"}
-            alt=""
-            style={{ position: "relative", zIndex: 1 }}
-          />
-          <div className="shadedHomeContainer" type="text"></div>
+          
           <div
             style={{
               display: "flex",
@@ -64,8 +58,7 @@ export default function Home(props) {
                 catch (err) {
                     console.error(err)
                 }
-            }} className="resourceButton1" style={{ width: "60%" }}>
-              Connect Wallet
+            }} className="connectButton">
             </div>
           </div>
         </div>

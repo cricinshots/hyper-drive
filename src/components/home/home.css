@@ -25,3 +25,12 @@
     position: absolute;
     z-index: 0;
 }
+.connectButton{
+    background: url("/public/Buttons/Group3355.png");
+    background-position: center;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 100px;
+    cursor: pointer;
+}
