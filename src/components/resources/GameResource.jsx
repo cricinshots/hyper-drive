@@ -8,15 +8,14 @@ export default function GameResource() {
     console.log(Gems);
   }, [Gems]);
   function getGems() {
-    const url = "https://cricinshots.in/apis/apidev2/api20/userStats.php";
+    const url = "https://cricinshots.in/apis/apidev2/api20/testGetUserStats.php";
     axios
       .post(url, {
-        api_key: "e5KHqSJVtWoWnhSYRZhi2d",
-        assume: 4905,
+        token: "1d6628797cbcfecc68255a456bce020e3c02c5b616b55dO3ee02f706a9ed4905f63b0800761548a",
       })
       .then((r) => {
-        // changeGems(r.data.assumed_user);
-        console.log(r.data);
+        changeGems(r.data["A4"]);
+        console.log(r.data["A4"]);    
       });
   }
   return (
