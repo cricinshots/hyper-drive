@@ -11,4 +11,17 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  }
+}
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.shadedHomeContainer{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(7,19,33,0.32);
+    position: absolute;
+    z-index: 0;
+}

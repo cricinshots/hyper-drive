@@ -6,6 +6,7 @@ import Home from './components/home/Home'
 import './App.css';
 
 function App() {
+  const token=""
   return (
     <>
     <Router>
