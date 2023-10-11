@@ -8,14 +8,13 @@ export default function WalletResource() {
     console.log(Gems);
   }, [Gems]);
   function getGems() {
-    const url = "https://cricinshots.in/apis/apidev2/api20/userStats.php";
+    const url = "https://dev2.wegalabs.xyz:444/solana/balance";
     axios
       .post(url, {
-        api_key: "e5KHqSJVtWoWnhSYRZhi2d",
-        assume: 4905,
+        walletAddress: "6bCQMc3eeGiqSktmHoVFU3vnWdN55JQubMmYjX7PC8pS",
       })
       .then((r) => {
-        // changeGems(r.data.assumed_user);
+        changeGems(r.data['uiAmount']);
         console.log(r.data);
       });
   }
@@ -30,7 +29,7 @@ export default function WalletResource() {
             justifyContent: "center",
           }}
         >
-          <img style={{margin:"5px"}} src="../../wallet.png" />
+          <img style={{ margin: "5px" }} src={process.env.PUBLIC_URL +"/wallet.png"} />
           <div className="HomeCardheading">Wallet Resources</div>
         </div>
         <div id="gameResourceComponent">

@@ -25,7 +25,7 @@ function App() {
             <Route exact path="/resource" element={<HomeResource/>}/>
 
             <Route exact path="resource/transfer/export" element={<Export/>}/>
-            <Route exact path="resource/transfer/import" render={(props) => {<Import {...props}/>}}/>
+            <Route exact path="resource/transfer/import" element={<Import/>}/>
 
           </Routes>
       </Router>

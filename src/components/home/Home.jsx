@@ -38,7 +38,7 @@ export default function Home(props) {
       <div className="con1">
         <div className="homeContainer">
           <img
-            src="../../groupHome.png"
+            src={process.env.PUBLIC_URL +"/groupHome.png"}
             alt=""
             style={{ position: "relative", zIndex: 1 }}
           />

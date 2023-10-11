@@ -36,10 +36,12 @@ export default function Home() {
             <div
               className="resourceButton"
               onClick={()=>navigate('transfer/export')}
-            >
-              TRANSFER TO WALLET
+              >
             </div>
-            <div className="resourceButton">TRANSFER TO GAME</div>
+            <div className="resourceButton2"
+            
+            onClick={()=>navigate('transfer/import')}
+            ></div>
           </div>
         </div>
       </div>

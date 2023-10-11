@@ -29,7 +29,7 @@ export default function GameResource() {
             justifyContent: "center",
           }}
         >
-          <img style={{margin:"5px"}} src="../../playerImage.png" />
+          <img style={{margin:"5px"}} src={process.env.PUBLIC_URL +"/playerImage.png"} />
           <div className="HomeCardheading">Game Resources</div>
         </div>
         <div id="gameResourceComponent">
